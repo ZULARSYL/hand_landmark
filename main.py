@@ -1,5 +1,6 @@
 import cv2
 import mediapipe as mp
+import pyautogui as gui
 
 
 def recognize_gesture(hand_landmarks):
@@ -47,11 +48,28 @@ def recognize_gesture(hand_landmarks):
        middle_tip.y < wrist.y and
        ring_tip.y < wrist.y and
        pinky_tip.y < wrist.y):
-        return "Hai"
+        return "Hai"    
     
+    # Metal: telunjuk dan kelingking terbuka, tengah dan manis menekuk
+    if (index_tip.y < index_mcp.y and
+        middle_tip.y > middle_mcp.y and
+        ring_tip.y > ring_mcp.y and
+        pinky_tip.y < pinky_mcp.y):
+        return "metal"    
     
     
     return "Tidak Dikenali"
+
+def gesture_action(gesture):
+    if gesture == "Jempol":
+        gui.press('up')  # Simulate pressing the up arrow key
+    elif gesture == "Peace":
+        gui.press('left')  # Simulate pressing the left arrow key
+    elif gesture == "Tiga Jari":
+        gui.press('right')  # Simulate pressing the right arrow key
+    # elif gesture == "Hai":
+    #     gui.press('down')  # Simulate pressing the down arrow key
+
 
 capture = cv2.VideoCapture(0)
 
@@ -74,6 +92,7 @@ while(capture.isOpened()):
     # Convert the frame to RGB
     rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
+
     # Process the frame with MediaPipe Hands
     results = hands.process(rgb_frame)
 
@@ -82,6 +101,7 @@ while(capture.isOpened()):
         for hand_landmarks in results.multi_hand_landmarks:
             mp_draw.draw_landmarks(frame, hand_landmarks, mp_hands.HAND_CONNECTIONS)
             gesture = recognize_gesture(hand_landmarks)
+            gesture_action(gesture)
             #tampilkan gesture pada frame
             cv2.putText(frame, gesture, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
 
