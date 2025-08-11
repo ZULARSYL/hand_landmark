@@ -10,6 +10,7 @@ Cocok digunakan untuk pengembangan **gesture recognition**, **kontrol interaktif
 - Ringan dan cepat dijalankan di CPU.
 ---
 ## 📂 Struktur Proyek
+- **`Hand-Landmark/`**
 Hand-Landmark/
 │-- main.py # Script utama untuk menjalankan deteksi tangan
 │-- requirements.txt # Daftar dependensi Python
