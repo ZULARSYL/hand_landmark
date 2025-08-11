@@ -9,13 +9,17 @@ def recognize_gesture(hand_landmarks):
     thumb_ip = hand_landmarks.landmark[3]
     thumb_mcp = hand_landmarks.landmark[2]
     index_tip = hand_landmarks.landmark[8]
+    index_pip = hand_landmarks.landmark[6]
     index_mcp = hand_landmarks.landmark[5]
     middle_tip = hand_landmarks.landmark[12]
     middle_mcp = hand_landmarks.landmark[9]
+    middle_pip = hand_landmarks.landmark[10]
     ring_tip = hand_landmarks.landmark[16]
     ring_mcp = hand_landmarks.landmark[13]
+    ring_pip = hand_landmarks.landmark[14]
     pinky_tip = hand_landmarks.landmark[20]
     pinky_mcp = hand_landmarks.landmark[17]
+    pinky_pip = hand_landmarks.landmark[18]
     wrist = hand_landmarks.landmark[0]
 
     # Gesture sederhana: Jempol ke atas
@@ -26,13 +30,20 @@ def recognize_gesture(hand_landmarks):
         pinky_tip.y > pinky_mcp.y):
         return "Jempol"
     
-    # Gesture sederhana: jari telunjuk dan jari tengah ke atas 
-    if (thumb_tip.y > thumb_ip.y and
-        index_tip.y < wrist.y and
+    #opsional Gesture: Peace
+    if (index_tip.y < wrist.y and
         middle_tip.y < wrist.y and
-        ring_tip.y > ring_mcp.y and
-        pinky_tip.y > pinky_mcp.y):
+        ring_tip.y > ring_pip.y and
+        pinky_tip.y > pinky_pip.y):
         return "Peace"
+    
+    # Gesture : metal 
+    if (thumb_tip.y < thumb_ip.y and
+        index_tip.y < wrist.y and
+        middle_tip.y > middle_pip.y and
+        ring_tip.y > ring_pip.y and
+        pinky_tip.y < wrist.y):
+        return "metal"
     
     # Gesture sederhana: jari telunjuk dan jari tengah ke atas 
     if (thumb_tip.y > thumb_ip.y and
@@ -48,14 +59,15 @@ def recognize_gesture(hand_landmarks):
        middle_tip.y < wrist.y and
        ring_tip.y < wrist.y and
        pinky_tip.y < wrist.y):
-        return "Hai"    
-    
-    # Metal: telunjuk dan kelingking terbuka, tengah dan manis menekuk
-    if (index_tip.y < index_mcp.y and
-        middle_tip.y > middle_mcp.y and
-        ring_tip.y > ring_mcp.y and
-        pinky_tip.y < pinky_mcp.y):
-        return "metal"    
+        return "Hai"  
+
+    # gesture : jari telunjuk ke atas
+    if (index_tip.y < index_pip.y and
+        middle_tip.y > middle_pip.y and
+        ring_tip.y > ring_pip.y and
+        pinky_tip.y > pinky_pip.y):
+        return "tunjuk"   
+
     
     
     return "Tidak Dikenali"
@@ -65,10 +77,10 @@ def gesture_action(gesture):
         gui.press('up')  # Simulate pressing the up arrow key
     elif gesture == "Peace":
         gui.press('left')  # Simulate pressing the left arrow key
-    elif gesture == "Tiga Jari":
+    elif gesture == "metal":
         gui.press('right')  # Simulate pressing the right arrow key
-    # elif gesture == "Hai":
-    #     gui.press('down')  # Simulate pressing the down arrow key
+    elif gesture == "Hai":
+        gui.press('down')  # Simulate pressing the down arrow key
 
 
 capture = cv2.VideoCapture(0)
