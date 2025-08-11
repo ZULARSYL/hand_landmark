@@ -1,4 +1,4 @@
-# ✋ Hand Landmark Detection with MediaPipe
+# Project Hand Landmark Detection with MediaPipe 🖐️
 
 Proyek ini menggunakan **[MediaPipe](https://developers.google.com/mediapipe)** untuk mendeteksi titik-titik (*[landmarks](https://ai.google.dev/edge/mediapipe/solutions/vision/gesture_recognizer?hl=id)*) pada tangan secara real-time.  
 Cocok digunakan untuk pengembangan **gesture recognition**, **kontrol interaktif**, atau **aplikasi berbasis AI/Computer Vision** lainnya.
