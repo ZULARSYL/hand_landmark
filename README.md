@@ -11,10 +11,8 @@ Cocok digunakan untuk pengembangan **gesture recognition**, **kontrol interaktif
 ---
 ## 📂 Struktur Proyek
 - **`Hand-Landmark/`**
-Hand-Landmark/
-│-- main.py # Script utama untuk menjalankan deteksi tangan
-│-- requirements.txt # Daftar dependensi Python
-└── README.md # Dokumentasi proyek
+<pre> ```plaintext Hand-Landmark/ ├── src/ │ ├── main.py │ ├── requirements.txt └── README.md ``` </pre>
+
 ---
 ## 📦 Instalasi
 1. **Clone repository**
