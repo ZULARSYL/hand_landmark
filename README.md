@@ -44,4 +44,8 @@ Cocok digunakan untuk pengembangan **gesture recognition**, **kontrol interaktif
 jika berhasil, kamera akan terbuka 
 ---
 ## 📸 Dokumentasi Project
+<img width="647" height="531" alt="Screenshot 2025-08-11 211354" src="https://github.com/user-attachments/assets/1766dfaa-12f7-42bf-90f7-d1e4501f67e7" />
+<img width="643" height="531" alt="Screenshot 2025-08-11 211334" src="https://github.com/user-attachments/assets/1a1b83e8-b430-4814-b245-8680161925ff" />
+<img width="639" height="524" alt="Screenshot 2025-08-11 211303" src="https://github.com/user-attachments/assets/7234b68c-408e-42da-95e3-95015f3e2648" />
+<img width="630" height="536" alt="Screenshot 2025-08-11 211142" src="https://github.com/user-attachments/assets/974a310b-fef1-4975-8895-5d295f9fce97" />
 
