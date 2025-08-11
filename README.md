@@ -1,6 +1,6 @@
 # ✋ Hand Landmark Detection with MediaPipe
 
-Proyek ini menggunakan **[MediaPipe](https://developers.google.com/mediapipe)** untuk mendeteksi titik-titik (*landmarks*) pada tangan secara real-time.  
+Proyek ini menggunakan **[MediaPipe](https://developers.google.com/mediapipe)** untuk mendeteksi titik-titik (*[landmarks](https://ai.google.dev/edge/mediapipe/solutions/vision/gesture_recognizer?hl=id)*) pada tangan secara real-time.  
 Cocok digunakan untuk pengembangan **gesture recognition**, **kontrol interaktif**, atau **aplikasi berbasis AI/Computer Vision** lainnya.
 ---
 ## 🚀 Fitur
@@ -22,32 +22,26 @@ Cocok digunakan untuk pengembangan **gesture recognition**, **kontrol interaktif
    ```bash
    git clone https://github.com/ZULARSYL/hand_landmark.git
    cd hand-landmark
+   
 2. **Buat Virtual Enviroment**
-   ``` text
-    mediapipe
-    opencv-python
-
-4. pip install
    ```bash
-   pip install mediapipe opencv-python
-
-
+    python -m venv hand_landmark
+    source hand_landmark/bin/activate   # MacOS/Linux
+    hand_landmark\Scripts\activate      # Windows
+   
+3. **Install Dependensi**
+   ```bash
+    pip install -r requirements.txt   
 ---
-## 🛠️ Dependensi
-Pastikan requirements.txt berisi:
-mediapipe
-opencv-python
-
-Install manual(opsional)
-
-pip install mediapipe opencv-python
-▶️ Menjalankan Proyek
-
-Jalankan script utama:
-python main.py
-Jika berhasil, kamera akan terbuka dan titik-titik landmark tangan akan muncul di layar.
-
-
+## 🛠️ Dependensi 
+- Pastikan requirments.text berisi :.
+  ```text
+  mediapipe
+  opencv-python
+- Jalankan Program.
+  ```bash
+  python main.py
+jika berhasil, kamera akan terbuka 
 ---
 ## 📸 Dokumentasi Project
 
