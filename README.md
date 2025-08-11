@@ -11,16 +11,19 @@ Cocok digunakan untuk pengembangan **gesture recognition**, **kontrol interaktif
 ---
 ## 📂 Struktur Proyek
 - **`Hand-Landmark/`**
-<pre> ```plaintext project-name/ ├── src/ │ ├── main.py │ ├── gesture_recognition.py │ └── utils.py ├── images/ │ └── example.png ├── requirements.txt └── README.md ``` </pre>
-project-name/
-├── src/
-│   ├── main.py
-│   ├── gesture_recognition.py
-│   └── utils.py
-├── images/
-│   └── example.png
-├── requirements.txt
-└── README.md
+<pre> ```plaintext project-name/ 
+   ├── src/
+   │
+   ├── main.py
+   │
+   ├── gesture_recognition.py
+   │
+   └── utils.py
+   ├── images/
+   │
+   └── example.png
+   ├── requirements.txt
+   └── README.md ``` </pre>
 
 ---
 ## 📦 Instalasi
