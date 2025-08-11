@@ -23,10 +23,14 @@ Cocok digunakan untuk pengembangan **gesture recognition**, **kontrol interaktif
    git clone https://github.com/ZULARSYL/hand_landmark.git
    cd hand-landmark
 2. **Buat Virtual Enviroment**
+   ``` text
     mediapipe
     opencv-python
 
-3. pip install -r requirements.txt
+4. pip install
+   ```bash
+   pip install mediapipe opencv-python
+
 
 ---
 ## 🛠️ Dependensi
