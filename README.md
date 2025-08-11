@@ -11,6 +11,7 @@ Cocok digunakan untuk pengembangan **gesture recognition**, **kontrol interaktif
 ---
 ## 📂 Struktur Proyek
 - **`Hand-Landmark/`**
+  <pre>
    ├── main.py
    ├── requirements.txt
    └── README.md</pre>
